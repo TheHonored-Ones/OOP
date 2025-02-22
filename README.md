@@ -33,9 +33,48 @@ public class Main {
 ```
 
 ## 2. Encapsulation
-**Encapsulation** is about bundling the data (variables) and methods that operate on the data within one unit (a class). It also involves restricting direct access to some of the object's components, which is done through access modifiers (private, public, etc.).
-
+**Encapsulation** is about bundling the data (variables) and methods that operate on the data within one unit (a class). It also involves restricting direct access to some of the object's components, which is done through access modifiers (private, public, etc.). Encapsulation helps protect data from unintended modifications and enforces controlled access through getter and setter methods.Encapsulation is implemented using access modifiers and getter/setter methods.
 **Private** fields and methods can only be accessed or modified within the class, while **public** methods allow controlled access.
+
+```bash
+public class Person {
+    private String name; // Private field
+    private int age;     // Private field
+}
+```
+Here, the variables cannot be accessed directly from outside the Person class.
+Since the variables are private, we need methods to get and update their values safely.
+```bash
+public class Person {
+    private String name;
+    private int age;
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+
+    // Setter for age
+    public void setAge(int age) {
+        if (age > 0) {  // Ensuring only valid ages are set
+            this.age = age;
+        } else {
+            System.out.println("Invalid age!");
+        }
+    }
+}
+```
+Now, values can be retrieved or modified only through these controlled methods.
 
 ```bash
 public class Person {
