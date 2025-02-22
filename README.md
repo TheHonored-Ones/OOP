@@ -194,20 +194,6 @@ car1.displayInfo();
 // Output: Toyota Corolla (2020)
 ```
 
-#### Person Profile (Constructors)
-👉 Create a class Person with:
-
-String name
-int age
-👉 Add a constructor that initializes these values.
-👉 Create a method introduce() that prints:
-💡 Example:
-```bash
-Person p = new Person("Alice", 25);
-p.introduce();
-// Output: Hi, my name is Alice and I am 25 years old.
-```
-
 #### Bank Account (Encapsulation - Getters & Setters
 Create a class BankAccount with:
 
