@@ -1,4 +1,4 @@
-import javax.swing.*;
+import java.util.Scanner;
 
 public class BankAccount {
     private double balance;
@@ -34,10 +34,15 @@ public class BankAccount {
 }
 
 class Transact{
-    public void main(String[] args){
+    public static void main(String[] args){
         BankAccount bankAccount = new BankAccount();
-        bankAccount.setBalance(bankAccount.getBalance(3894.52));
-        bankAccount.deposit(5000.00);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter balance: ");
+        double amount = input.nextDouble();
+        System.out.println("Enter amount to deposit: ");
+        double deposit = input.nextDouble();
+        bankAccount.setBalance(bankAccount.getBalance(amount));
+        bankAccount.deposit(deposit);
 
         System.out.println(bankAccount.output());
 
@@ -46,10 +51,3 @@ class Transact{
 
     }
 
-
-class ActionListener {
-    JPopupMenu popup = new JPopupMenu();
-    JMenuItem menuItem = new JMenuItem("A popup menu item");
-    menuItem.addActionListener(this);
-
-}
